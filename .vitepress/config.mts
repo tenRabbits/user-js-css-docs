@@ -5,6 +5,7 @@ export default defineConfig({
   title: "User JS and CSS",
   description: "Chrome extension",
   head: [["link", { rel: "icon", href: "/favicon.png" }]],
+  base: "/repo/",
   themeConfig: {
     logo: "/logo.svg",
     socialLinks: [
