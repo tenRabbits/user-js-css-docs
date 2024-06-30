@@ -43,7 +43,7 @@ domain.zone
 Most invalid patterns now work with a temporary URL resolver, but its correctness is not guaranteed, so it is recommended to disable it and rewrite the URL according to the new rules. In the future, the result of its work will be saved as the original, and it will be removed.
 :::
 
-If the old URL matching mode is requiredб you can use the script from the [cookbook](/cookbook#url-matches-from-version-2-x)
+If the old URL matching mode is required, you can use the script from the [cookbook](/cookbook#url-matches-from-version-2-x)
 
 ### JavaScript properties
 
