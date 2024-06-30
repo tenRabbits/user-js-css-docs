@@ -10,8 +10,8 @@ hero:
     src: /hero.svg
   actions:
     - theme: brand
-      text: Guide
-      link: /rules
+      text: Documentation
+      link: /doc
     - theme: alt
       text: About the extension
       link: /about

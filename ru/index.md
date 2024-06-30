@@ -10,8 +10,8 @@ hero:
     src: /hero.svg
   actions:
     - theme: brand
-      text: Руководство
-      link: /ru/rules
+      text: Документация
+      link: /ru/doc
     - theme: alt
       text: О расширении
       link: /about

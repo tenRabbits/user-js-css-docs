@@ -1,14 +1,18 @@
-# Rules
+# Documentation
+
+The extension requires a version of **Chrome 120** or higher. Other browsers are not supported at this time.
+
+## Rules
 
 In the context of the extension, a `rule` is JavaScript and/or CSS code that is triggered on web pages that match its URL patterns.
 
-## URL patterns.
+### URL patterns.
 
 - The pattern dares the schema: `<scheme>://<host>/<path>`;
 - Can be combined comma-separated: `https://one.com/*, https://two.com/*`;
 - An exclusionary pattern is marked with `!`: `!https://excluded.com/*`.
 
-### Changes since version 3.0
+**Changes since version 3.0**
 
 As of version 3.0, the requirements for extension URL patterns have increased, you can read more about them on [Google page](https://developer.chrome.com/docs/extensions/develop/concepts/match-patterns). In brief:
 
@@ -39,11 +43,7 @@ domain.zone
 Most invalid patterns now work with a temporary URL resolver, but its correctness is not guaranteed, so it is recommended to disable it and rewrite the URL according to the new rules. In the future, the result of its work will be saved as the original, and it will be removed.
 :::
 
-### Rule Properties
-
-### Shared rules
-
-“Shared rules” allows you to build dependencies between different rules and explicitly control the order in which they are loaded. Any rule can be marked as “shared” - this will add it to the list of modules of other rules. Only JS and CSS content is taken from the included rules, other properties of the rule are ignored.
+If the old URL matching mode is requiredб you can use the script from the [cookbook](/cookbook#url-matches-from-version-2-x)
 
 ### JavaScript properties
 
@@ -55,9 +55,12 @@ Most invalid patterns now work with a temporary URL resolver, but its correctnes
 
 - `Programmatic injection`:
   - **Enabled**: initially low style priority, but maximized when `!important` is used. Live CSS editing mode is available. Can be used without “developer mode”.
-  - **Disabled**: higher style priority by placing `<style/>` at the end of the DOM. Unavailable modes: live CSS, “all frames”. This mode is not available without “developer mode”.
-- `All frames`: whether CSS should be injected in all frames within the tab.
+  - **Disabled**: higher style priority by placing `<style/>` at the end of the DOM. Unavailable modes: live CSS. This mode is not available without “developer mode”.
 - `Automatic !important`: adds `!important` to all CSS properties in already compiled code.
+
+### Shared rules
+
+“Shared rules” allows you to build dependencies between different rules and explicitly control the order in which they are loaded. Any rule can be marked as “shared” - this will add it to the list of modules of other rules. Only JS and CSS content is taken from the included rules, other properties of the rule are ignored.
 
 ### Other features
 
@@ -65,13 +68,18 @@ Most invalid patterns now work with a temporary URL resolver, but its correctnes
 - The `save to cloud` marker only indicates that the rule is included in the storage during synchronization and does not perform any additional actions;
 - The choice of `SASS` or `SCSS` preprocessor syntax is automatic, based on the presence of `{;}` characters in the code.
 
-## ES6 Modules.
+## Modules
 
-You cannot import or export ES6 modules between rules, but you can use modules from the Internet, for example in this way:
+External JS and CSS modules can be attached to [rules](./rules), they run before the rules. `https://...` links are supported, the resource type is recognized by the extension.
 
-```js
-;(async () => {
-  const { module } = await import("https://...")
-  // your code is here
-})()
-```
+The module content is loaded and cached in the extension storage, to update it you need to click “download again” in the edit window.
+
+## Storage
+
+Improvements to backup and sync functionality are just forthcoming, but for now backups work **only manually and only in full storage replacement mode**.
+
+### Google Sync
+
+If synchronization is enabled in your browser, you can upload backups to the cloud under your Google account. This method requires no additional authorization or configuration, `storage.sync` is the [standard sync type for extensions](https://developer.chrome.com/docs/extensions/reference/api/storage#storage_areas).
+
+But it is limited to 100kb, so before uploading, the content of all external resources is scrubbed from the storage, all generative data is removed, and the resulting output is compressed using `CompressionStream`. If you still don't have enough space, you can disable cloud synchronization on unimportant scripts.

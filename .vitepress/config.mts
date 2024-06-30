@@ -4,7 +4,7 @@ import { defineConfig } from "vitepress"
 export default defineConfig({
   title: "User JS and CSS",
   description: "Chrome extension",
-  head: [["link", { rel: "icon", href: "/favicon.png" }]],
+  head: [["link", { rel: "icon", href: "/user-js-css-docs/favicon.png" }]],
   base: "/user-js-css-docs/",
   themeConfig: {
     logo: "/logo.svg",
@@ -28,19 +28,13 @@ export default defineConfig({
       lang: "en",
       themeConfig: {
         nav: [
-          { text: "Guide", link: "/rules" },
+          { text: "Documentation", link: "/doc" },
           { text: "About", link: "/about" },
         ],
 
         sidebar: [
-          {
-            text: "Guide",
-            items: [
-              { text: "Rules", link: "/rules" },
-              { text: "Modules", link: "/modules" },
-              { text: "Storage", link: "/storage" },
-            ],
-          },
+          { text: "Documentation", link: "/doc" },
+          { text: "Cookbook", link: "/cookbook" },
           { text: "About", link: "/about" },
         ],
       },
@@ -50,19 +44,13 @@ export default defineConfig({
       lang: "ru",
       themeConfig: {
         nav: [
-          { text: "Руководство", link: "/ru/rules" },
+          { text: "Документация", link: "/ru/doc" },
           { text: "О расширении", link: "/ru/about" },
         ],
 
         sidebar: [
-          {
-            text: "Руководство",
-            items: [
-              { text: "Правила", link: "/ru/rules" },
-              { text: "Модули", link: "/ru/modules" },
-              { text: "Хранилище", link: "/ru/storage" },
-            ],
-          },
+          { text: "Документация", link: "/ru/doc" },
+          { text: "Книга рецептов", link: "/ru/cookbook" },
           { text: "О расширении", link: "/ru/about" },
         ],
         outlineTitle: "Содержание",
