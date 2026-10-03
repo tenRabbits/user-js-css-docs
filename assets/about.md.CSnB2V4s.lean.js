@@ -1,0 +1,1 @@
+import{_ as e,c as t,o,a3 as a}from"./chunks/framework.BKGnwDRm.js";const f=JSON.parse('{"title":"About the extension","description":"","frontmatter":{},"headers":[],"relativePath":"about.md","filePath":"about.md"}'),n={name:"about.md"},s=a("",11),r=[s];function i(l,c,p,d,u,h){return o(),t("div",null,r)}const _=e(n,[["render",i]]);export{f as __pageData,_ as default};
