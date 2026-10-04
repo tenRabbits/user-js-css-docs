@@ -1,0 +1,15 @@
+name: Feature request / Предложение
+description: Suggest an improvement / Предложить улучшение
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What are you trying to do / Какую задачу решаете
+      description: The task matters more than a ready-made solution / Задача важнее готового решения
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: How you see it / Как это видите

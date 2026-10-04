@@ -1,0 +1,31 @@
+name: Bug report / Ошибка
+description: Something does not work as expected / Что-то работает не так
+labels: [bug]
+body:
+  - type: input
+    id: version
+    attributes:
+      label: Extension version / Версия расширения
+      description: Options → About / Настройки → О расширении
+    validations:
+      required: true
+  - type: input
+    id: browser
+    attributes:
+      label: Browser and version / Браузер и версия
+      placeholder: Chrome 141, Firefox 145…
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened / Что произошло
+      description: Steps, what you expected and what you got / Шаги, что ожидали и что получили
+    validations:
+      required: true
+  - type: textarea
+    id: rule
+    attributes:
+      label: Rule URL pattern and code / Адрес и код правила
+      description: Optional, but often the fastest way to reproduce / Необязательно, но так быстрее всего воспроизвести
+      render: js

@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Documentation / Документация
+    url: https://tenrabbits.github.io/user-js-css-docs/
+    about: How rules, URL patterns and libraries work / Как устроены правила, адреса и библиотеки
