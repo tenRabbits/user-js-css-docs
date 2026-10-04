@@ -1,1 +1,0 @@
-import{_ as e,c as a,o as t,a3 as r}from"./chunks/framework.BKGnwDRm.js";const b=JSON.parse('{"title":"О расширении","description":"","frontmatter":{},"headers":[],"relativePath":"ru/about.md","filePath":"ru/about.md"}'),l={name:"ru/about.md"},o=r("",11),i=[o];function s(n,c,d,h,_,p){return t(),a("div",null,i)}const f=e(l,[["render",s]]);export{b as __pageData,f as default};

@@ -1,1 +1,0 @@
-import{_ as s,c as i,o as a,a3 as n}from"./chunks/framework.BKGnwDRm.js";const y=JSON.parse('{"title":"Cookbook","description":"","frontmatter":{},"headers":[],"relativePath":"cookbook.md","filePath":"cookbook.md"}'),t={name:"cookbook.md"},h=n("",14),l=[h];function k(e,p,r,E,d,o){return a(),i("div",null,l)}const c=s(t,[["render",k]]);export{y as __pageData,c as default};

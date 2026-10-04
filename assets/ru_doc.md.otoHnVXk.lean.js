@@ -1,0 +1,1 @@
+import{_ as t,o,c as d,a2 as c}from"./chunks/framework.BKIQXCqS.js";const p=JSON.parse('{"title":"Документация","description":"","frontmatter":{},"headers":[],"relativePath":"ru/doc.md","filePath":"ru/doc.md"}'),r={name:"ru/doc.md"};function a(s,e,i,l,h,n){return o(),d("div",null,[...e[0]||(e[0]=[c("",30)])])}const m=t(r,[["render",a]]);export{p as __pageData,m as default};

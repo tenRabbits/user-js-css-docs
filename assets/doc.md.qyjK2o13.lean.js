@@ -1,1 +1,0 @@
-import{_ as e,c as t,o,a3 as a}from"./chunks/framework.BKGnwDRm.js";const b=JSON.parse('{"title":"Documentation","description":"","frontmatter":{},"headers":[],"relativePath":"doc.md","filePath":"doc.md"}'),d={name:"doc.md"},r=a("",30),s=[r];function i(n,c,l,h,u,p){return o(),t("div",null,s)}const g=e(d,[["render",i]]);export{b as __pageData,g as default};
