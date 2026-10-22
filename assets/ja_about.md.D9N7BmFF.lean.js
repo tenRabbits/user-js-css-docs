@@ -1,0 +1,1 @@
+import{_ as a,o as r,c as t,a2 as o}from"./chunks/framework.BKIQXCqS.js";const _=JSON.parse('{"title":"拡張機能について","description":"","frontmatter":{},"headers":[],"relativePath":"ja/about.md","filePath":"ja/about.md"}'),s={name:"ja/about.md"};function l(n,e,d,i,c,p){return r(),t("div",null,[...e[0]||(e[0]=[o("",9)])])}const f=a(s,[["render",l]]);export{_ as __pageData,f as default};

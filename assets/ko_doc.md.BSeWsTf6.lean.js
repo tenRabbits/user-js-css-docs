@@ -1,0 +1,1 @@
+import{_ as o,o as t,c as d,a2 as c}from"./chunks/framework.BKIQXCqS.js";const u=JSON.parse('{"title":"문서","description":"","frontmatter":{},"headers":[],"relativePath":"ko/doc.md","filePath":"ko/doc.md"}'),a={name:"ko/doc.md"};function r(s,e,i,l,h,n){return t(),d("div",null,[...e[0]||(e[0]=[c("",44)])])}const m=o(a,[["render",r]]);export{u as __pageData,m as default};
